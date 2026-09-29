@@ -1,4 +1,3 @@
-# Situa-o-problema-checkout-de-um-e-comerce-em-colapso
 // ===== SEÇÃO 1: CARRINHO (laço de repetição) ======
 
 function calcularSubtotal(itens) {
