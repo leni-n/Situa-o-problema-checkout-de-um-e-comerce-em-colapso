@@ -1,0 +1,1 @@
+# Situa-o-problema-checkout-de-um-e-comerce-em-colapso
