@@ -23,7 +23,30 @@ function contarItens(itens) {
 // ===== SEÇÃO 2: CUPOM(estruturas condicionais) =====
 
 function aplicarCupom(subtotal, codigo) {
-    //TODO
+     let desconto = 0;
+
+    // if else
+    if (codigo === 'DESC10') {
+        desconto = subtotal * 0.10;
+    } else if (codigo === 'DESC20') {
+        if (subtotal >= 200) {
+            desconto = subtotal * 0.20;
+        }
+    } else if (codigo === 'FRETEGRATIS') {
+        desconto = 15;
+    } else {
+        desconto = 0;
+    }
+
+    // Calcular novo valor
+    let novoValor = subtotal - desconto;
+
+    // pra não ser negativo
+    if (novoValor < 0) {
+        novoValor = 0;
+    }
+
+    return novoValor;
 }
 
 //===== SEÇÃO 3: CHECKOUT(integração) =====
