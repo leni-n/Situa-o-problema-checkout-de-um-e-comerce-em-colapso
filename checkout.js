@@ -52,7 +52,15 @@ function aplicarCupom(subtotal, codigo) {
 //===== SEÇÃO 3: CHECKOUT(integração) =====
 
 function finalizarCompra(itens, codigoCupom) {
-    return { subtotal: 0, desconto: 0, total: 0}; //TODO: interagir carrinho e cupom
+     let subtotal = calcularSubtotal(itens);
+     let total = aplicarCupom(subtotal, codigoCupom);
+     let desconto = subtotal - total;
+    
+    return { 
+        subtotal: subtotal, 
+        desconto: desconto, 
+        total: total
+    }
 }
 
 //===== SEÇÃO 4: TESTES =====
