@@ -1,20 +1,32 @@
 // ===== SEÇÃO 1: CARRINHO (laço de repetição) ======
 
 function calcularSubtotal(itens) {
-    //TODO
+    let subtotal = 0;
+    let i = 0;
+    while (i < itens.length) {
+        subtotal = subtotal + itens[i].preco * itens[i].quantidade;
+        i++;
+    }
+    return subtotal;
 }
 
 function contarItens(itens) {
-    //TODO
+    let total = 0;
+    let i = 0;
+    while (i < itens.length) {
+        total = total + itens[i].quantidade;
+        i++;
+    }
+    return total;
 }
 
-// ===== SEÇAÕ 2: CUPOM(estruturas condicionais) =====
+// ===== SEÇÃO 2: CUPOM(estruturas condicionais) =====
 
 function aplicarCupom(subtotal, codigo) {
     //TODO
 }
 
-//===== SESÃO 3: CHECKOUT(integração) =====
+//===== SEÇÃO 3: CHECKOUT(integração) =====
 
 function finalizarCompra(itens, codigoCupom) {
     return { subtotal: 0, desconto: 0, total: 0}; //TODO: interagir carrinho e cupom
